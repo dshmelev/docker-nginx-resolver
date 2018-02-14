@@ -4,7 +4,7 @@ if [ "$NAMESERVER" == "" ]; then
 fi
 
 echo "Nameserver is: $NAMESERVER"
-echo "resolver $NAMESERVER valid=10s;" > /etc/nginx/resolver.conf
+echo "resolver $NAMESERVER $RESOLVER_PARAMS;" > /etc/nginx/resolver.conf
 
 # default behaviour is to launch nginx
 if [[ -z ${1} ]]; then
